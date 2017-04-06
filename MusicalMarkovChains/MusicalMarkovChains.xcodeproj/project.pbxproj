@@ -16,6 +16,8 @@
 		B3C7D1B11E962AAB00EE65B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C7D1AF1E962AAB00EE65B4 /* LaunchScreen.storyboard */; };
 		B3C7D1BC1E962AAB00EE65B4 /* MusicalMarkovChainsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7D1BB1E962AAB00EE65B4 /* MusicalMarkovChainsTests.swift */; };
 		B3C7D1C71E962AAB00EE65B4 /* MusicalMarkovChainsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7D1C61E962AAB00EE65B4 /* MusicalMarkovChainsUITests.swift */; };
+		B3C7D1DF1E96460200EE65B4 /* instrumentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7D1DE1E96460200EE65B4 /* instrumentCell.swift */; };
+		B3C7D1E11E96484000EE65B4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7D1E01E96484000EE65B4 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		B3C7D1C21E962AAB00EE65B4 /* MusicalMarkovChainsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicalMarkovChainsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C7D1C61E962AAB00EE65B4 /* MusicalMarkovChainsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicalMarkovChainsUITests.swift; sourceTree = "<group>"; };
 		B3C7D1C81E962AAB00EE65B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3C7D1DE1E96460200EE65B4 /* instrumentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = instrumentCell.swift; sourceTree = "<group>"; };
+		B3C7D1E01E96484000EE65B4 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = ../SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +105,13 @@
 		B3C7D1A11E962AAA00EE65B4 /* MusicalMarkovChains */ = {
 			isa = PBXGroup;
 			children = (
+				B3C7D1E01E96484000EE65B4 /* SearchViewController.swift */,
 				B3C7D1A21E962AAA00EE65B4 /* AppDelegate.swift */,
 				B3C7D1A41E962AAA00EE65B4 /* RootViewController.swift */,
 				B3C7D1A61E962AAA00EE65B4 /* DataViewController.swift */,
 				B3C7D1A81E962AAA00EE65B4 /* ModelController.swift */,
 				B3C7D1AA1E962AAA00EE65B4 /* Main.storyboard */,
+				B3C7D1DE1E96460200EE65B4 /* instrumentCell.swift */,
 				B3C7D1AD1E962AAB00EE65B4 /* Assets.xcassets */,
 				B3C7D1AF1E962AAB00EE65B4 /* LaunchScreen.storyboard */,
 				B3C7D1B21E962AAB00EE65B4 /* Info.plist */,
@@ -265,7 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C7D1E11E96484000EE65B4 /* SearchViewController.swift in Sources */,
 				B3C7D1A51E962AAA00EE65B4 /* RootViewController.swift in Sources */,
+				B3C7D1DF1E96460200EE65B4 /* instrumentCell.swift in Sources */,
 				B3C7D1A91E962AAA00EE65B4 /* ModelController.swift in Sources */,
 				B3C7D1A71E962AAA00EE65B4 /* DataViewController.swift in Sources */,
 				B3C7D1A31E962AAA00EE65B4 /* AppDelegate.swift in Sources */,

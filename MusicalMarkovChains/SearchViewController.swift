@@ -14,8 +14,8 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
    
     
     override func viewDidLoad() {
-        searchOutlet.dataSource = self
-        searchOutlet.delegate = self//UICollectionViewDelegate = self
+        CVCoutlet.dataSource = self
+        CVCoutlet.delegate = self//UICollectionViewDelegate = self
         //CVCoutlet
         super.viewDidLoad()
         
@@ -26,8 +26,7 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
         super.didReceiveMemoryWarning()
     }
     
-    @IBOutlet weak var searchOutlet: UICollectionView!
-    
+    @IBOutlet weak var CVCoutlet: UICollectionView!
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5

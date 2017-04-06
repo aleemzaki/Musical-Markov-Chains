@@ -10,7 +10,6 @@
 import UIKit
 import Foundation
 class instrumentCell: UICollectionViewCell {
-    
-    @IBOutlet weak var imageView: UIImageView!
-    //@IBOutlet weak var CVCoutlet: UIImageView!
+
+    @IBOutlet weak var outletii: UIImageView!
 }

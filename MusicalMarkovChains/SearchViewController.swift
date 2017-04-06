@@ -39,7 +39,17 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         let temp = collectionView.dequeueReusableCell(withReuseIdentifier: "instCellReuse", for: indexPath) as? instrumentCell
         //let cellString = PokemonGenerator.categoryDict[indexPath.item ]
-        temp?.imageView.image = UIImage(named: cellString!)
+        switch indexPath.item {
+        case 1:
+            temp?.outletii.image = #imageLiteral(resourceName: "violin")
+        case 2:
+            temp?.outletii.image = #imageLiteral(resourceName: "flute")
+        default:
+            temp?.outletii.image = #imageLiteral(resourceName: "Trumpet")
+            
+            
+        }
+        //temp?.imageView.image = UIImage(named: cellString!)
         return temp!
         
         // return PokemonGenerator.categoryDict

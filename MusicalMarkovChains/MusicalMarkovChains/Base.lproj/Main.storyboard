@@ -210,12 +210,20 @@
                                     <action selector="confirmButtonPushed:" destination="4xE-hf-7xZ" eventType="touchUpInside" id="v3h-c3-yns"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Markov Chain" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTt-gP-RgO">
+                                <rect key="frame" x="16" y="67" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="confirmButton" destination="Kr0-AL-kfc" id="U0y-47-6ya"/>
                         <outlet property="markovEditOutlet" destination="vfh-78-Kwd" id="Vhy-iP-69T"/>
+                        <outlet property="markovchaineditlabel" destination="lTt-gP-RgO" id="1zq-U6-u0R"/>
                         <segue destination="Ogc-7b-Izz" kind="show" identifier="editToMarkov" id="xvS-ao-ext"/>
                     </connections>
                 </viewController>

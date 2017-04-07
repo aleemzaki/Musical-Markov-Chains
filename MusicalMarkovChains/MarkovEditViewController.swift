@@ -13,7 +13,7 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
     
     var editableInstrumlist: [String]?
     var InstrBeingEdited: String?
-    var markovEditValues: [Float] = []
+    var markovEditValues: [String] = []
     var initonce : Bool = false
     
     override func viewDidLoad() {
@@ -21,13 +21,14 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
        markovEditOutlet.delegate = self
        super.viewDidLoad()
        initarray()
+    markovchaineditlabel.text = markovEditValues.description
     }
     
     func initarray(){
         //markovEditValues.
         if (!initonce){
         for _ in editableInstrumlist! {
-            markovEditValues.append(0.0)
+            markovEditValues.append(String(0.0))
         }
         print("I should only appear once!")
         initonce = true
@@ -78,18 +79,26 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
         while (i < (editableInstrumlist?.count)!) {
             if let testcell = tableView.cellForRow(at: indexPath) as? markovEditCell {
                 
-                markovEditValues.append(Float(testcell.markoveditcelltextfield.text!)!)
+                markovEditValues.append(testcell.markoveditcelltextfield.text!)
             }
             i = i + 1
         }
         //print(markovEditValues)
     }
+    
+    @IBOutlet weak var markovchaineditlabel: UILabel!
     @objc(tableView:didSelectRowAtIndexPath:) func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //l5.text  = String(format: "%.2f", (Zahl / 95) * 100)
         // selectedIndexPath = indexPath
         if let tempcell = tableView.cellForRow(at: indexPath) as? markovEditCell {
             //tempcell.markoveditcelltextfield.
-            markovEditValues[indexPath.item] = Float(tempcell.markoveditcelltextfield.text!)!
+            if ((tempcell.markoveditcelltextfield.text) != "") {
+                let floatemp = Float(tempcell.markoveditcelltextfield.text!)!
+                let stringtemp = String(format: "%.2f", floatemp)
+                
+            markovEditValues[indexPath.item] = stringtemp
+                markovchaineditlabel.text = String(describing: markovEditValues)
+            }
         }
         print(markovEditValues)
         //performSegue(withIdentifier: "categoryToInfo", sender: nil)

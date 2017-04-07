@@ -12,6 +12,8 @@ class MarkovViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     
     var instrumlist: [String]?
+    var markovDict: [String:[Float32]]?// = [:[]]
+    
     
     override func viewDidLoad() {
         MCoutlet.dataSource = self

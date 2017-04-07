@@ -217,6 +217,7 @@
 				TargetAttributes = {
 					B3C7D19E1E962AAA00EE65B4 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 37T96LJD4C;
 						ProvisioningStyle = Automatic;
 					};
 					B3C7D1B61E962AAB00EE65B4 = {
@@ -442,6 +443,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 37T96LJD4C;
 				INFOPLIST_FILE = MusicalMarkovChains/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Zaki.MusicalMarkovChains;
@@ -454,6 +456,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 37T96LJD4C;
 				INFOPLIST_FILE = MusicalMarkovChains/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Zaki.MusicalMarkovChains;

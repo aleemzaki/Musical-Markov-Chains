@@ -163,7 +163,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="61" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vfh-78-Kwd">
-                                <rect key="frame" x="0.0" y="109" width="375" height="550"/>
+                                <rect key="frame" x="0.0" y="109" width="375" height="475"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -198,11 +198,25 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kr0-AL-kfc">
+                                <rect key="frame" x="60" y="601" width="265" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Confrim Values are OK">
+                                    <color key="titleColor" red="1" green="0.979666178" blue="0.94105065239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmButtonPushed:" destination="4xE-hf-7xZ" eventType="touchUpInside" id="v3h-c3-yns"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="confirmButton" destination="Kr0-AL-kfc" id="U0y-47-6ya"/>
                         <outlet property="markovEditOutlet" destination="vfh-78-Kwd" id="Vhy-iP-69T"/>
+                        <segue destination="Ogc-7b-Izz" kind="show" identifier="editToMarkov" id="xvS-ao-ext"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XuM-NQ-B6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -210,4 +224,7 @@
             <point key="canvasLocation" x="2060" y="1149.1754122938532"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xvS-ao-ext"/>
+    </inferredMetricsTieBreakers>
 </document>

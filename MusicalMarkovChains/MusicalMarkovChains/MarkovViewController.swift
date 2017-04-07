@@ -42,12 +42,14 @@ class MarkovViewController: UIViewController,UITableViewDelegate,UITableViewData
          return temp!*/
         
     }
-    
+    var instrumBeingEditedString = String()
     @objc(tableView:didSelectRowAtIndexPath:) func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if let cell = tableView.cellForRow(at: indexPath) as? markovCell {
+            instrumBeingEditedString = cell.instrumLabel.text!
+        }
        // selectedIndexPath = indexPath
-        
-        //performSegue(withIdentifier: "categoryToInfo", sender: nil)
+        //instrumBeingEditedString =
+        performSegue(withIdentifier: "markovToMarkovEdit", sender: nil)
         
     }
     
@@ -55,11 +57,11 @@ class MarkovViewController: UIViewController,UITableViewDelegate,UITableViewData
         
         
         
-      /*  if segue.identifier == "categoryToInfo" {
-            let destination = segue.destination as? PokemonInfoViewController
-            destination?.pokemon = pokemonArray?[(selectedIndexPath?.row)!]
-            destination?.image = cachedImages[(selectedIndexPath?.row)!]
-        }*/
+        if segue.identifier == "markovToMarkovEdit" {
+            let destination = segue.destination as? MarkovEditViewController
+            destination?.editableInstrumlist = instrumlist
+            destination?.InstrBeingEdited = instrumBeingEditedString//instrumLabel.text
+        }
     }
     
     

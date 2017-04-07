@@ -11,7 +11,8 @@ import UIKit
 class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     
-    var instrumlist: [String]?
+    var editableInstrumlist: [String]?
+    var InstrBeingEdited: String?
     
     override func viewDidLoad() {
        markovEditOutlet.dataSource = self
@@ -28,13 +29,13 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1
+        return (editableInstrumlist?.count)!
         
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let temp = tableView.dequeueReusableCell(withIdentifier: "markovEditReuse", for: indexPath) as? markovEditCell
-        //temp?.instrumLabel.text = instrumlist?[indexPath.item]
+        temp?.PrLabel.text = "Pr["+InstrBeingEdited!+" to "+(editableInstrumlist?[indexPath.item])!+"]"
         return temp!
         /*let temp = tableView.dequeueReusableCell(withIdentifier: "viewCellReuse", for: indexPath) as? categoryviewcell
          _ = pokemonArray?[indexPath.item ]

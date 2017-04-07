@@ -12,6 +12,7 @@ import UIKit
 class markovEditCell: UITableViewCell {
     
     @IBOutlet weak var markoveditcelltextfield: UITextField!
+    @IBOutlet weak var PrLabel: UILabel!
     //@IBOutlet weak var instrumLabel: UILabel!
     // @IBOutlet weak var outletll: UILabel!
     //  @IBOutlet weak var outletii: UIImageView!

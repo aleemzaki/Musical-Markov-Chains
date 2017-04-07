@@ -36,6 +36,11 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
         
         let temp = tableView.dequeueReusableCell(withIdentifier: "markovEditReuse", for: indexPath) as? markovEditCell
         temp?.PrLabel.text = "Pr["+InstrBeingEdited!+" to "+(editableInstrumlist?[indexPath.item])!+"]"
+        if (indexPath.item == 0) {
+            temp?.markoveditcelltextfield.text = "1"
+        } else {
+            temp?.markoveditcelltextfield.text = "0"
+        }
         return temp!
         /*let temp = tableView.dequeueReusableCell(withIdentifier: "viewCellReuse", for: indexPath) as? categoryviewcell
          _ = pokemonArray?[indexPath.item ]

@@ -64,10 +64,7 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
            // markovEditDoubles.append(Double(round(100*(Double(val))!)/100))
         }
         k = 0
-        for val in markovEditValues {
-            markovEditDoubles[k] = (Double(round(100*(0.0))/100))
-            k = k + 1
-        }
+        
         print((String(format: "%.2f", total))+" equal 1.00?" )
         if (String(format: "%.2f", total) == "1.00") {
             print("passed!")
@@ -77,8 +74,12 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
         } else {
             total = 0
             let alert = UIAlertController(title: "Error", message: "Pr's don't add up to 1", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
+        }
+        for val in markovEditValues {
+            markovEditDoubles[k] = (Double(round(100*(0.0))/100))
+            k = k + 1
         }
         total = 0
         
@@ -155,6 +156,8 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
          let destination = segue.destination as? MarkovViewController
             if (completed){
                 destination?.justCompletedInstrum = InstrBeingEdited
+                destination?.markovDoubles = markovEditDoubles
+                destination?.update()
             }
             destination?.instrumlist = editableInstrumlist
          }

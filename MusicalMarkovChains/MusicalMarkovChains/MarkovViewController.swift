@@ -10,10 +10,12 @@ import Foundation
 import UIKit
 class MarkovViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
+    @IBOutlet weak var dictionaryLabel: UILabel!
     
     var instrumlist: [String]?
-    var markovDict: [String:[Float32]]?// = [:[]]
+    var markovDict: [String:[Double]] = ["sitar":[7.3,4.3]]
     var justCompletedInstrum: String?
+    var markovDoubles: [Double] = []
     
     override func viewDidLoad() {
         MCoutlet.dataSource = self
@@ -25,7 +27,12 @@ class MarkovViewController: UIViewController,UITableViewDelegate,UITableViewData
         super.didReceiveMemoryWarning()
     }
     
-    
+    func update(){//called by MarkovEditViewController only when its values add up to 1
+        print(markovDict.description)
+        markovDict[justCompletedInstrum!] = markovDoubles
+        print(markovDict.description)
+        //dictionaryLabel.text="markovDict.description"
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         

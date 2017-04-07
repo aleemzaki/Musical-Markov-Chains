@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B3BD3A931E97978C002A323E /* MarkovViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BD3A921E97978C002A323E /* MarkovViewController.swift */; };
 		B3BD3A951E9798F4002A323E /* markovCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BD3A941E9798F4002A323E /* markovCell.swift */; };
+		B3BD3A971E979FD9002A323E /* MarkovEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BD3A961E979FD9002A323E /* MarkovEditViewController.swift */; };
+		B3BD3A991E97A027002A323E /* markovEditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BD3A981E97A027002A323E /* markovEditCell.swift */; };
 		B3C7D1A31E962AAA00EE65B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7D1A21E962AAA00EE65B4 /* AppDelegate.swift */; };
 		B3C7D1A51E962AAA00EE65B4 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7D1A41E962AAA00EE65B4 /* RootViewController.swift */; };
 		B3C7D1A71E962AAA00EE65B4 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7D1A61E962AAA00EE65B4 /* DataViewController.swift */; };
@@ -42,6 +44,8 @@
 /* Begin PBXFileReference section */
 		B3BD3A921E97978C002A323E /* MarkovViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkovViewController.swift; sourceTree = "<group>"; };
 		B3BD3A941E9798F4002A323E /* markovCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = markovCell.swift; sourceTree = "<group>"; };
+		B3BD3A961E979FD9002A323E /* MarkovEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MarkovEditViewController.swift; path = ../MarkovEditViewController.swift; sourceTree = "<group>"; };
+		B3BD3A981E97A027002A323E /* markovEditCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = markovEditCell.swift; sourceTree = "<group>"; };
 		B3C7D19F1E962AAA00EE65B4 /* MusicalMarkovChains.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicalMarkovChains.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C7D1A21E962AAA00EE65B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3C7D1A41E962AAA00EE65B4 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 		B3C7D1A11E962AAA00EE65B4 /* MusicalMarkovChains */ = {
 			isa = PBXGroup;
 			children = (
+				B3BD3A961E979FD9002A323E /* MarkovEditViewController.swift */,
+				B3BD3A981E97A027002A323E /* markovEditCell.swift */,
 				B3C7D1E01E96484000EE65B4 /* SearchViewController.swift */,
 				B3C7D1A21E962AAA00EE65B4 /* AppDelegate.swift */,
 				B3C7D1A41E962AAA00EE65B4 /* RootViewController.swift */,
@@ -280,8 +286,10 @@
 				B3C7D1E11E96484000EE65B4 /* SearchViewController.swift in Sources */,
 				B3C7D1A51E962AAA00EE65B4 /* RootViewController.swift in Sources */,
 				B3BD3A931E97978C002A323E /* MarkovViewController.swift in Sources */,
+				B3BD3A991E97A027002A323E /* markovEditCell.swift in Sources */,
 				B3BD3A951E9798F4002A323E /* markovCell.swift in Sources */,
 				B3C7D1DF1E96460200EE65B4 /* instrumentCell.swift in Sources */,
+				B3BD3A971E979FD9002A323E /* MarkovEditViewController.swift in Sources */,
 				B3C7D1A91E962AAA00EE65B4 /* ModelController.swift in Sources */,
 				B3C7D1A71E962AAA00EE65B4 /* DataViewController.swift in Sources */,
 				B3C7D1A31E962AAA00EE65B4 /* AppDelegate.swift in Sources */,

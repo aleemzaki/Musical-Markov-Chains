@@ -72,6 +72,7 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     @IBAction func continueWithSelInstrPressed(_ sender: UIButton) {
        // view.backgroundColor = UIColor.green
+        performSegue(withIdentifier: "instrumentToMarkov", sender: nil)
         print("success!")
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -170,10 +171,11 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         
-      /*  if segue.identifier == "searchToCategory" {
-            let destination = segue.destination as? CategoryViewController
-            destination?.pokemonArray = filteredArray
-        }*/
+       if segue.identifier == "instrumentToMarkov" {
+            let destination = segue.destination as? MarkovViewController
+            destination?.instrumlist = chosenInstrumentArray
+            print(destination?.instrumlist)
+        }
     }
     
     // Utility function to iterate through pokemon array for a single category

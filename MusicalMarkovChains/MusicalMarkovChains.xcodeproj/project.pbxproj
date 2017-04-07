@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3BD3A931E97978C002A323E /* MarkovViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BD3A921E97978C002A323E /* MarkovViewController.swift */; };
+		B3BD3A951E9798F4002A323E /* markovCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BD3A941E9798F4002A323E /* markovCell.swift */; };
 		B3C7D1A31E962AAA00EE65B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7D1A21E962AAA00EE65B4 /* AppDelegate.swift */; };
 		B3C7D1A51E962AAA00EE65B4 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7D1A41E962AAA00EE65B4 /* RootViewController.swift */; };
 		B3C7D1A71E962AAA00EE65B4 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7D1A61E962AAA00EE65B4 /* DataViewController.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B3BD3A921E97978C002A323E /* MarkovViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkovViewController.swift; sourceTree = "<group>"; };
+		B3BD3A941E9798F4002A323E /* markovCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = markovCell.swift; sourceTree = "<group>"; };
 		B3C7D19F1E962AAA00EE65B4 /* MusicalMarkovChains.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicalMarkovChains.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C7D1A21E962AAA00EE65B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3C7D1A41E962AAA00EE65B4 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -111,7 +115,9 @@
 				B3C7D1A61E962AAA00EE65B4 /* DataViewController.swift */,
 				B3C7D1A81E962AAA00EE65B4 /* ModelController.swift */,
 				B3C7D1AA1E962AAA00EE65B4 /* Main.storyboard */,
+				B3BD3A921E97978C002A323E /* MarkovViewController.swift */,
 				B3C7D1DE1E96460200EE65B4 /* instrumentCell.swift */,
+				B3BD3A941E9798F4002A323E /* markovCell.swift */,
 				B3C7D1AD1E962AAB00EE65B4 /* Assets.xcassets */,
 				B3C7D1AF1E962AAB00EE65B4 /* LaunchScreen.storyboard */,
 				B3C7D1B21E962AAB00EE65B4 /* Info.plist */,
@@ -273,6 +279,8 @@
 			files = (
 				B3C7D1E11E96484000EE65B4 /* SearchViewController.swift in Sources */,
 				B3C7D1A51E962AAA00EE65B4 /* RootViewController.swift in Sources */,
+				B3BD3A931E97978C002A323E /* MarkovViewController.swift in Sources */,
+				B3BD3A951E9798F4002A323E /* markovCell.swift in Sources */,
 				B3C7D1DF1E96460200EE65B4 /* instrumentCell.swift in Sources */,
 				B3C7D1A91E962AAA00EE65B4 /* ModelController.swift in Sources */,
 				B3C7D1A71E962AAA00EE65B4 /* DataViewController.swift in Sources */,

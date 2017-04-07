@@ -34,6 +34,10 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
         print("I should only appear once!")
         initonce = true
         }
+        for val in markovEditValues {
+            markovEditDoubles.append(Double(round(100*(0.0))/100))
+            //k = k + 1
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -41,12 +45,16 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
     
     @IBOutlet weak var confirmButton: UIButton!
     var i = Int()
+    var k = Int()
+    var j = Int()
     var total = Double()
     @IBAction func confirmButtonPushed(_ sender: Any) {
         print(markovEditValues)
         //Double(round(100*(Double(markovEditValues[0])))/100)
+        j = 0
         for val in markovEditValues {
-            markovEditDoubles.append(Double(round(100*(Double(val))!)/100))
+            markovEditDoubles[j]=(Double(round(100*(Double(val))!)/100))
+            j = j + 1
         }
         total = 0
         print(markovEditDoubles)
@@ -54,10 +62,24 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
            total = total + doub
            // markovEditDoubles.append(Double(round(100*(Double(val))!)/100))
         }
+        k = 0
+        for val in markovEditValues {
+            markovEditDoubles[k] = (Double(round(100*(0.0))/100))
+            k = k + 1
+        }
         print((String(format: "%.2f", total))+" equal 1.00?" )
         if (String(format: "%.2f", total) == "1.00") {
             print("passed!")
+            total = 0
+            performSegue(withIdentifier: "editToMarkov", sender: nil)
+        } else {
+            total = 0
+            let alert = UIAlertController(title: "Error", message: "Pr's don't add up to 1", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
+        total = 0
+        
     }
     @IBOutlet weak var markovEditOutlet: UITableView!
 
@@ -127,11 +149,10 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
         
         
         
-        /*  if segue.identifier == "categoryToInfo" {
-         let destination = segue.destination as? PokemonInfoViewController
-         destination?.pokemon = pokemonArray?[(selectedIndexPath?.row)!]
-         destination?.image = cachedImages[(selectedIndexPath?.row)!]
-         }*/
+         if segue.identifier == "editToMarkov" {
+         let destination = segue.destination as? MarkovViewController
+            destination?.instrumlist = editableInstrumlist
+         }
     }
     
     

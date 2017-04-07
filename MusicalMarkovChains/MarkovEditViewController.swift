@@ -14,6 +14,7 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
     var editableInstrumlist: [String]?
     var InstrBeingEdited: String?
     var markovEditValues: [String] = []
+    var markovEditDoubles: [Double] = []
     var initonce : Bool = false
     
     override func viewDidLoad() {
@@ -40,11 +41,26 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
     
     @IBOutlet weak var confirmButton: UIButton!
     var i = Int()
+    var total = Double()
     @IBAction func confirmButtonPushed(_ sender: Any) {
-        
+        print(markovEditValues)
+        //Double(round(100*(Double(markovEditValues[0])))/100)
+        for val in markovEditValues {
+            markovEditDoubles.append(Double(round(100*(Double(val))!)/100))
+        }
+        total = 0
+        print(markovEditDoubles)
+        for doub in markovEditDoubles {
+           total = total + doub
+           // markovEditDoubles.append(Double(round(100*(Double(val))!)/100))
+        }
+        print((String(format: "%.2f", total))+" equal 1.00?" )
+        if (String(format: "%.2f", total) == "1.00") {
+            print("passed!")
+        }
     }
     @IBOutlet weak var markovEditOutlet: UITableView!
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return (editableInstrumlist?.count)!
@@ -98,9 +114,11 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
                 
             markovEditValues[indexPath.item] = stringtemp
                 markovchaineditlabel.text = String(describing: markovEditValues)
+                //markovEditDoubles.append(Double(round(100*(Double(markovEditValues[0]))!)/100))
+                tempcell.markoveditcelltextfield.resignFirstResponder()
             }
         }
-        print(markovEditValues)
+        
         //performSegue(withIdentifier: "categoryToInfo", sender: nil)
         
     }

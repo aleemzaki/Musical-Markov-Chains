@@ -16,6 +16,7 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
     var markovEditValues: [String] = []
     var markovEditDoubles: [Double] = []
     var initonce : Bool = false
+    var completed: Bool = false
     
     override func viewDidLoad() {
        markovEditOutlet.dataSource = self
@@ -71,6 +72,7 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
         if (String(format: "%.2f", total) == "1.00") {
             print("passed!")
             total = 0
+            completed = true
             performSegue(withIdentifier: "editToMarkov", sender: nil)
         } else {
             total = 0
@@ -151,6 +153,9 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
         
          if segue.identifier == "editToMarkov" {
          let destination = segue.destination as? MarkovViewController
+            if (completed){
+                destination?.justCompletedInstrum = InstrBeingEdited
+            }
             destination?.instrumlist = editableInstrumlist
          }
     }

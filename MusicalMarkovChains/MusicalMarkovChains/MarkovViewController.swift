@@ -13,7 +13,7 @@ class MarkovViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     var instrumlist: [String]?
     var markovDict: [String:[Float32]]?// = [:[]]
-    
+    var justCompletedInstrum: String?
     
     override func viewDidLoad() {
         MCoutlet.dataSource = self
@@ -37,6 +37,13 @@ class MarkovViewController: UIViewController,UITableViewDelegate,UITableViewData
         
         let temp = tableView.dequeueReusableCell(withIdentifier: "markovReuse", for: indexPath) as? markovCell
         temp?.instrumLabel.text = instrumlist?[indexPath.item]
+        if (temp?.instrumLabel.text == justCompletedInstrum){
+            temp?.statusLabel.text = "complete!"
+            temp?.statusLabel.textColor = UIColor.green
+        } else {
+            temp?.statusLabel.text = "incomplete"
+            //temp?.statusLabel.textColor = UIColor.green
+        }
         return temp!
         /*let temp = tableView.dequeueReusableCell(withIdentifier: "viewCellReuse", for: indexPath) as? categoryviewcell
          _ = pokemonArray?[indexPath.item ]

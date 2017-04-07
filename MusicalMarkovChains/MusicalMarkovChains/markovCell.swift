@@ -11,6 +11,7 @@ import UIKit
 
 class markovCell: UITableViewCell {
     
+    @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var instrumLabel: UILabel!
    // @IBOutlet weak var outletll: UILabel!
   //  @IBOutlet weak var outletii: UIImageView!

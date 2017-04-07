@@ -519,6 +519,7 @@
 				B3C7D1CD1E962AAB00EE65B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3C7D1CE1E962AAB00EE65B4 /* Build configuration list for PBXNativeTarget "MusicalMarkovChainsTests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +528,7 @@
 				B3C7D1D01E962AAB00EE65B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3C7D1D11E962AAB00EE65B4 /* Build configuration list for PBXNativeTarget "MusicalMarkovChainsUITests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +537,7 @@
 				B3C7D1D31E962AAB00EE65B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

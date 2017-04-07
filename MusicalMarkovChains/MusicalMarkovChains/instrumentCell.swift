@@ -11,5 +11,6 @@ import UIKit
 import Foundation
 class instrumentCell: UICollectionViewCell {
 
+    @IBOutlet weak var outletll: UILabel!
     @IBOutlet weak var outletii: UIImageView!
 }

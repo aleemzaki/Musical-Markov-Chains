@@ -13,7 +13,8 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
     
     var editableInstrumlist: [String]?
     var InstrBeingEdited: String?
-    var markovEditValues: [Float32]?
+    var markovEditValues: [Float] = []
+    var initonce : Bool = false
     
     override func viewDidLoad() {
        markovEditOutlet.dataSource = self
@@ -21,8 +22,16 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
        super.viewDidLoad()
        initarray()
     }
+    
     func initarray(){
         //markovEditValues.
+        if (!initonce){
+        for _ in editableInstrumlist! {
+            markovEditValues.append(0.0)
+        }
+        print("I should only appear once!")
+        initonce = true
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -45,11 +54,8 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
         let temp = tableView.dequeueReusableCell(withIdentifier: "markovEditReuse", for: indexPath) as? markovEditCell
         temp?.PrLabel.text = "Pr["+InstrBeingEdited!+" to "+(editableInstrumlist?[indexPath.item])!+"]"
         temp?.markoveditcelltextfield.keyboardType = UIKeyboardType.decimalPad
-        if (indexPath.item == 0) {
-           // temp?.markoveditcelltextfield.text = "1"
-        } else {
-           // temp?.markoveditcelltextfield.text = "0"
-        }
+        //temp?.markoveditcelltextfield.text = String(markovEditValues[indexPath.item])
+        
        /* i = 0
         while (i < (editableInstrumlist?.count)!) {
             
@@ -58,7 +64,7 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
         }*/
         if (indexPath.item ==
             ((editableInstrumlist?.count)! - 1)) {
-            confirm(tableView,cellForRowAt: indexPath)
+            //confirm(tableView,cellForRowAt: indexPath)
         }
         return temp!
         /*let temp = tableView.dequeueReusableCell(withIdentifier: "viewCellReuse", for: indexPath) as? categoryviewcell
@@ -72,16 +78,20 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
         while (i < (editableInstrumlist?.count)!) {
             if let testcell = tableView.cellForRow(at: indexPath) as? markovEditCell {
                 
-                markovEditValues?.append(Float(testcell.markoveditcelltextfield.text!)!)
+                markovEditValues.append(Float(testcell.markoveditcelltextfield.text!)!)
             }
             i = i + 1
         }
-        print(markovEditValues)
+        //print(markovEditValues)
     }
     @objc(tableView:didSelectRowAtIndexPath:) func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        //l5.text  = String(format: "%.2f", (Zahl / 95) * 100)
         // selectedIndexPath = indexPath
-        
+        if let tempcell = tableView.cellForRow(at: indexPath) as? markovEditCell {
+            //tempcell.markoveditcelltextfield.
+            markovEditValues[indexPath.item] = Float(tempcell.markoveditcelltextfield.text!)!
+        }
+        print(markovEditValues)
         //performSegue(withIdentifier: "categoryToInfo", sender: nil)
         
     }

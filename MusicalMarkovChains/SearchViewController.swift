@@ -13,6 +13,9 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     var chosenInstrumentArray: [String] = []
     
+    struct MyGlobalVariables {
+        static var yourVariable = "someString"
+    }
     
     override func viewDidLoad() {
         CVCoutlet.dataSource = self

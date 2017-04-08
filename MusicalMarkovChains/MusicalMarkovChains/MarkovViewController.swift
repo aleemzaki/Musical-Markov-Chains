@@ -12,6 +12,12 @@ class MarkovViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     @IBOutlet weak var dictionaryLabel: UILabel!
     
+    
+    /*
+     Clarence tyr to find a way to make these variables global such that we don't have to keep passing them between MarkovViewController and MarkovEditViewController via prepare for segues funcs
+ 
+     Then try to make an Orchestrate button that will segue to a new View Controller if all the instrument's in instrumList have had their Markov chains completed and confirmed (their prs add up to one) 
+    */
     var instrumlist: [String]?
     var markovDict: [String:[Double]] = ["sitar":[7.3,4.3]]
     var justCompletedInstrum: String?
@@ -26,7 +32,6 @@ class MarkovViewController: UIViewController,UITableViewDelegate,UITableViewData
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
     func update(){//called by MarkovEditViewController only when its values add up to 1
         print(markovDict.description)
         markovDict[justCompletedInstrum!] = markovDoubles
@@ -35,10 +40,13 @@ class MarkovViewController: UIViewController,UITableViewDelegate,UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+        let newvar = MyGlobalVariables.yourvariable
         return (instrumlist?.count)!
         
     }
+    
+    
+    
     @IBOutlet weak var MCoutlet: UITableView!
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         

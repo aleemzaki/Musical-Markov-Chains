@@ -23,6 +23,8 @@
 		B3C7D1DF1E96460200EE65B4 /* instrumentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7D1DE1E96460200EE65B4 /* instrumentCell.swift */; };
 		B3C7D1E11E96484000EE65B4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7D1E01E96484000EE65B4 /* SearchViewController.swift */; };
 		B3CA1D731EA200A200F51730 /* GlobalVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CA1D721EA200A200F51730 /* GlobalVars.swift */; };
+		B3CA1D751EA210C600F51730 /* OrchestraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CA1D741EA210C600F51730 /* OrchestraViewController.swift */; };
+		B3CA1D771EA2112A00F51730 /* orchestraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CA1D761EA2112A00F51730 /* orchestraCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		B3C7D1DE1E96460200EE65B4 /* instrumentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = instrumentCell.swift; sourceTree = "<group>"; };
 		B3C7D1E01E96484000EE65B4 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = ../SearchViewController.swift; sourceTree = "<group>"; };
 		B3CA1D721EA200A200F51730 /* GlobalVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVars.swift; sourceTree = "<group>"; };
+		B3CA1D741EA210C600F51730 /* OrchestraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrchestraViewController.swift; sourceTree = "<group>"; };
+		B3CA1D761EA2112A00F51730 /* orchestraCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = orchestraCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,8 @@
 				B3C7D1A81E962AAA00EE65B4 /* ModelController.swift */,
 				B3C7D1AA1E962AAA00EE65B4 /* Main.storyboard */,
 				B3BD3A921E97978C002A323E /* MarkovViewController.swift */,
+				B3CA1D741EA210C600F51730 /* OrchestraViewController.swift */,
+				B3CA1D761EA2112A00F51730 /* orchestraCell.swift */,
 				B3C7D1DE1E96460200EE65B4 /* instrumentCell.swift */,
 				B3BD3A941E9798F4002A323E /* markovCell.swift */,
 				B3C7D1AD1E962AAB00EE65B4 /* Assets.xcassets */,
@@ -293,10 +299,12 @@
 				B3BD3A931E97978C002A323E /* MarkovViewController.swift in Sources */,
 				B3BD3A991E97A027002A323E /* markovEditCell.swift in Sources */,
 				B3BD3A951E9798F4002A323E /* markovCell.swift in Sources */,
+				B3CA1D771EA2112A00F51730 /* orchestraCell.swift in Sources */,
 				B3C7D1DF1E96460200EE65B4 /* instrumentCell.swift in Sources */,
 				B3BD3A971E979FD9002A323E /* MarkovEditViewController.swift in Sources */,
 				B3C7D1A91E962AAA00EE65B4 /* ModelController.swift in Sources */,
 				B3C7D1A71E962AAA00EE65B4 /* DataViewController.swift in Sources */,
+				B3CA1D751EA210C600F51730 /* OrchestraViewController.swift in Sources */,
 				B3C7D1A31E962AAA00EE65B4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

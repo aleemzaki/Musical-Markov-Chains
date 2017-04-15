@@ -12,6 +12,16 @@ class MarkovViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     @IBOutlet weak var dictionaryLabel: UILabel!
     
+    @IBOutlet weak var OrchestrateButton: UIButton!
+    @IBAction func OrchestrateButtonPressed(_ sender: Any) {
+        if (GlobalVars.readyToOrchestrate) {
+            
+         } else {
+            let alert = UIAlertController(title: "Error", message: "Not all of the instruments' Markov Chains have been completed", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
     
     /*
      Clarence tyr to find a way to make these variables global such that we don't have to keep passing them between MarkovViewController and MarkovEditViewController via prepare for segues funcs
@@ -61,6 +71,16 @@ class MarkovViewController: UIViewController,UITableViewDelegate,UITableViewData
         } else {
             temp?.statusLabel.text = "incomplete"
             //temp?.statusLabel.textColor = UIColor.green
+        }
+        //var readyToOrchestrate = Bool()
+        GlobalVars.readyToOrchestrate = true
+        for isComplete in GlobalVars.completedArray {
+            if isComplete == false {
+                GlobalVars.readyToOrchestrate = false
+            }
+        }
+        if GlobalVars.readyToOrchestrate {
+            
         }
         return temp!
         /*let temp = tableView.dequeueReusableCell(withIdentifier: "viewCellReuse", for: indexPath) as? categoryviewcell

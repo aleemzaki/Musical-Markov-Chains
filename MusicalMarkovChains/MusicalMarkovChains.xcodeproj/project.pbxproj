@@ -26,13 +26,13 @@
 		B3CA1D751EA210C600F51730 /* OrchestraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CA1D741EA210C600F51730 /* OrchestraViewController.swift */; };
 		B3CA1D771EA2112A00F51730 /* orchestraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CA1D761EA2112A00F51730 /* orchestraCell.swift */; };
 		B3CA1D791EA2219D00F51730 /* violinapp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B3CA1D781EA2219D00F51730 /* violinapp.mp3 */; };
-		B3CA1D7B1EA2236E00F51730 /* fluteapp.wav in Resources */ = {isa = PBXBuildFile; fileRef = B3CA1D7A1EA2236E00F51730 /* fluteapp.wav */; };
 		B3CA1D7D1EA2245700F51730 /* drumapp.wav in Resources */ = {isa = PBXBuildFile; fileRef = B3CA1D7C1EA2245700F51730 /* drumapp.wav */; };
 		B3CA1D831EA2261300F51730 /* acguiatarapp.wav in Resources */ = {isa = PBXBuildFile; fileRef = B3CA1D7E1EA2261300F51730 /* acguiatarapp.wav */; };
 		B3CA1D841EA2261300F51730 /* elguiarapp.wav in Resources */ = {isa = PBXBuildFile; fileRef = B3CA1D7F1EA2261300F51730 /* elguiarapp.wav */; };
 		B3CA1D851EA2261300F51730 /* gpianoapp.wav in Resources */ = {isa = PBXBuildFile; fileRef = B3CA1D801EA2261300F51730 /* gpianoapp.wav */; };
 		B3CA1D861EA2261300F51730 /* keyboardapp.wav in Resources */ = {isa = PBXBuildFile; fileRef = B3CA1D811EA2261300F51730 /* keyboardapp.wav */; };
 		B3CA1D871EA2261300F51730 /* trumpet.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B3CA1D821EA2261300F51730 /* trumpet.mp3 */; };
+		B3CA1D891EA2287200F51730 /* fluteapp.wav in Resources */ = {isa = PBXBuildFile; fileRef = B3CA1D881EA2287200F51730 /* fluteapp.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,13 +78,13 @@
 		B3CA1D741EA210C600F51730 /* OrchestraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrchestraViewController.swift; sourceTree = "<group>"; };
 		B3CA1D761EA2112A00F51730 /* orchestraCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = orchestraCell.swift; sourceTree = "<group>"; };
 		B3CA1D781EA2219D00F51730 /* violinapp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = violinapp.mp3; path = ../../../../violinapp.mp3; sourceTree = "<group>"; };
-		B3CA1D7A1EA2236E00F51730 /* fluteapp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = fluteapp.wav; path = ../../../../fluteapp.wav; sourceTree = "<group>"; };
 		B3CA1D7C1EA2245700F51730 /* drumapp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = drumapp.wav; path = ../../../../drumapp.wav; sourceTree = "<group>"; };
 		B3CA1D7E1EA2261300F51730 /* acguiatarapp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = acguiatarapp.wav; path = ../../../../acguiatarapp.wav; sourceTree = "<group>"; };
 		B3CA1D7F1EA2261300F51730 /* elguiarapp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = elguiarapp.wav; path = ../../../../elguiarapp.wav; sourceTree = "<group>"; };
 		B3CA1D801EA2261300F51730 /* gpianoapp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = gpianoapp.wav; path = ../../../../gpianoapp.wav; sourceTree = "<group>"; };
 		B3CA1D811EA2261300F51730 /* keyboardapp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = keyboardapp.wav; path = ../../../../keyboardapp.wav; sourceTree = "<group>"; };
 		B3CA1D821EA2261300F51730 /* trumpet.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trumpet.mp3; path = ../../../../trumpet.mp3; sourceTree = "<group>"; };
+		B3CA1D881EA2287200F51730 /* fluteapp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = fluteapp.wav; path = ../../../../fluteapp.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +139,6 @@
 				B3CA1D721EA200A200F51730 /* GlobalVars.swift */,
 				B3BD3A981E97A027002A323E /* markovEditCell.swift */,
 				B3C7D1E01E96484000EE65B4 /* SearchViewController.swift */,
-				B3CA1D7A1EA2236E00F51730 /* fluteapp.wav */,
 				B3C7D1A21E962AAA00EE65B4 /* AppDelegate.swift */,
 				B3C7D1A41E962AAA00EE65B4 /* RootViewController.swift */,
 				B3C7D1A61E962AAA00EE65B4 /* DataViewController.swift */,
@@ -151,13 +150,7 @@
 				B3C7D1DE1E96460200EE65B4 /* instrumentCell.swift */,
 				B3BD3A941E9798F4002A323E /* markovCell.swift */,
 				B3C7D1AD1E962AAB00EE65B4 /* Assets.xcassets */,
-				B3CA1D7E1EA2261300F51730 /* acguiatarapp.wav */,
-				B3CA1D7F1EA2261300F51730 /* elguiarapp.wav */,
-				B3CA1D801EA2261300F51730 /* gpianoapp.wav */,
-				B3CA1D811EA2261300F51730 /* keyboardapp.wav */,
-				B3CA1D821EA2261300F51730 /* trumpet.mp3 */,
-				B3CA1D7C1EA2245700F51730 /* drumapp.wav */,
-				B3CA1D781EA2219D00F51730 /* violinapp.mp3 */,
+				B3CA1D8A1EA228DF00F51730 /* instrumentAudio */,
 				B3C7D1AF1E962AAB00EE65B4 /* LaunchScreen.storyboard */,
 				B3C7D1B21E962AAB00EE65B4 /* Info.plist */,
 			);
@@ -180,6 +173,21 @@
 				B3C7D1C81E962AAB00EE65B4 /* Info.plist */,
 			);
 			path = MusicalMarkovChainsUITests;
+			sourceTree = "<group>";
+		};
+		B3CA1D8A1EA228DF00F51730 /* instrumentAudio */ = {
+			isa = PBXGroup;
+			children = (
+				B3CA1D7E1EA2261300F51730 /* acguiatarapp.wav */,
+				B3CA1D7F1EA2261300F51730 /* elguiarapp.wav */,
+				B3CA1D801EA2261300F51730 /* gpianoapp.wav */,
+				B3CA1D881EA2287200F51730 /* fluteapp.wav */,
+				B3CA1D811EA2261300F51730 /* keyboardapp.wav */,
+				B3CA1D821EA2261300F51730 /* trumpet.mp3 */,
+				B3CA1D7C1EA2245700F51730 /* drumapp.wav */,
+				B3CA1D781EA2219D00F51730 /* violinapp.mp3 */,
+			);
+			name = instrumentAudio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +300,7 @@
 			files = (
 				B3C7D1B11E962AAB00EE65B4 /* LaunchScreen.storyboard in Resources */,
 				B3CA1D851EA2261300F51730 /* gpianoapp.wav in Resources */,
+				B3CA1D891EA2287200F51730 /* fluteapp.wav in Resources */,
 				B3CA1D871EA2261300F51730 /* trumpet.mp3 in Resources */,
 				B3CA1D791EA2219D00F51730 /* violinapp.mp3 in Resources */,
 				B3CA1D7D1EA2245700F51730 /* drumapp.wav in Resources */,
@@ -300,7 +309,6 @@
 				B3C7D1AE1E962AAB00EE65B4 /* Assets.xcassets in Resources */,
 				B3CA1D861EA2261300F51730 /* keyboardapp.wav in Resources */,
 				B3C7D1AC1E962AAA00EE65B4 /* Main.storyboard in Resources */,
-				B3CA1D7B1EA2236E00F51730 /* fluteapp.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

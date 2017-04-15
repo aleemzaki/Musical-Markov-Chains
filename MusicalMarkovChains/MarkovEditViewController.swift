@@ -25,7 +25,7 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
        initarray()
        markovchaineditlabel.text = markovEditValues.description
        //SearchViewController.yourVa
-       GlobalVars.completedArray = [true]
+       //GlobalVars.completedArray = [true]
     }
     
     func initarray(){

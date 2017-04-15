@@ -53,7 +53,9 @@ class MarkovViewController: UIViewController,UITableViewDelegate,UITableViewData
         
         let temp = tableView.dequeueReusableCell(withIdentifier: "markovReuse", for: indexPath) as? markovCell
         temp?.instrumLabel.text = instrumlist?[indexPath.item]
-        if (temp?.instrumLabel.text == justCompletedInstrum){
+        if (/*temp?.instrumLabel.text == justCompletedInstrum*/
+            GlobalVars.completedArray[indexPath.item] == true
+            ){
             temp?.statusLabel.text = "complete!"
             temp?.statusLabel.textColor = UIColor.green
         } else {

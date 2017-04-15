@@ -177,8 +177,12 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
        if segue.identifier == "instrumentToMarkov" {
             let destination = segue.destination as? MarkovViewController
             destination?.instrumlist = chosenInstrumentArray
+            //[Bool](count:(destination?.instrumlist?.count)!, repeatedValue: nil)
+            var tempcompletedArray = [Bool]( repeating: false, count: (destination?.instrumlist?.count)! )
             //completion
-            //MyUniVariables.comp
+            //MyUniVariables.co
+        //mp
+            GlobalVars.completedArray = tempcompletedArray
             print(destination?.instrumlist)
         }
     }

@@ -15,7 +15,7 @@ class MarkovViewController: UIViewController,UITableViewDelegate,UITableViewData
     @IBOutlet weak var OrchestrateButton: UIButton!
     @IBAction func OrchestrateButtonPressed(_ sender: Any) {
         if (GlobalVars.readyToOrchestrate) {
-            
+            performSegue(withIdentifier: "toOrchestrate", sender: nil)
          } else {
             let alert = UIAlertController(title: "Error", message: "Not all of the instruments' Markov Chains have been completed", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))

@@ -154,7 +154,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3b-yO-5th">
-                                <rect key="frame" x="114" y="40" width="203" height="30"/>
+                                <rect key="frame" x="142" y="84" width="203" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98810400305410118" green="0.92402009983733713" blue="0.44218732331140548" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Orchestrate"/>
@@ -170,6 +170,7 @@
                         <outlet property="OrchestrateButton" destination="H3b-yO-5th" id="iCf-C0-qaJ"/>
                         <outlet property="dictionaryLabel" destination="tPt-su-btl" id="1JQ-nP-8iu"/>
                         <segue destination="4xE-hf-7xZ" kind="show" identifier="markovToMarkovEdit" id="CyR-mT-GYw"/>
+                        <segue destination="mXv-Ni-v9t" kind="show" identifier="toOrchestrate" id="O0q-nh-3Zh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Erz-iN-0pE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -277,16 +278,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gnm-a4-zfb">
-                                <rect key="frame" x="67" y="193" width="240" height="268"/>
+                                <rect key="frame" x="16" y="28" width="343" height="619"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="orchestraCell" id="C4X-Bl-9ju">
-                                        <rect key="frame" x="0.0" y="28" width="240" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C4X-Bl-9ju" id="A1I-6d-tyj">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="947-dc-A18">
+                                                    <rect key="frame" x="124" y="11" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -300,7 +310,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W7G-Ht-ucH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1692" y="1815.7421289355323"/>
+            <point key="canvasLocation" x="1692" y="1814.8425787106448"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

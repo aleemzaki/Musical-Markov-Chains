@@ -11,8 +11,8 @@ import UIKit
 class OrchestraViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
-       // MCoutlet.dataSource = self
-       // MCoutlet.delegate = self
+       Orcoutlet.dataSource = self
+       Orcoutlet.delegate = self
         super.viewDidLoad()
     }
     

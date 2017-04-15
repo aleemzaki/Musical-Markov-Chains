@@ -33,9 +33,9 @@ class MarkovViewController: UIViewController,UITableViewDelegate,UITableViewData
         super.didReceiveMemoryWarning()
     }
     func update(){//called by MarkovEditViewController only when its values add up to 1
-        print(markovDict.description)
+        //print(markovDict.description)
         markovDict[justCompletedInstrum!] = markovDoubles
-        print(markovDict.description)
+        //print(markovDict.description)
         //dictionaryLabel.text="markovDict.description"
     }
     

@@ -34,7 +34,7 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
         for _ in editableInstrumlist! {
             markovEditValues.append(String(0.0))
         }
-        print("I should only appear once!")
+        //print("I should only appear once!")
         initonce = true
         }
         for _ in markovEditValues {
@@ -55,7 +55,7 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
     var l = Int()
     var total = Double()
     @IBAction func confirmButtonPushed(_ sender: Any) {
-        print(markovEditValues)
+        //print(markovEditValues)
         //Double(round(100*(Double(markovEditValues[0])))/100)
         j = 0
         for val in markovEditValues {
@@ -63,14 +63,14 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
             j = j + 1
         }
         total = 0
-        print(markovEditDoubles)
+        //print(markovEditDoubles)
         for doub in markovEditDoubles {
            total = total + doub
            // markovEditDoubles.append(Double(round(100*(Double(val))!)/100))
         }
         k = 0
         
-        print((String(format: "%.2f", total))+" equal 1.00?" )
+        //print((String(format: "%.2f", total))+" equal 1.00?" )
         if (String(format: "%.2f", total) == "1.00") {
             print("passed!")
             total = 0
@@ -82,6 +82,11 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
                 }
                 l = l + 1
             }
+            //dictionary.updateValue(value: "Hola", forKey: 1)
+            GlobalVars.globalmarkovDict.updateValue(markovEditDoubles, forKey: (InstrBeingEdited?.capitalized)!)
+            print("BEGIN")
+            print(GlobalVars.globalmarkovDict)
+            print("END")
             performSegue(withIdentifier: "editToMarkov", sender: nil)
         } else {
             total = 0

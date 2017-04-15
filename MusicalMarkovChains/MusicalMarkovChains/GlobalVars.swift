@@ -12,4 +12,5 @@ class GlobalVars{
     
     static var completedArray = [Bool]()
     static var globalchosenInstrumentArray: [String] = []
+    static var globalmarkovDict = [String:[Double]]()// = ["sitar":[7.3,4.3]]
 }

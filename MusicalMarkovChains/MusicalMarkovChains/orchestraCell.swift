@@ -10,4 +10,5 @@ import Foundation
 import UIKit
 class orchestraCell: UITableViewCell {
     
+    @IBOutlet weak var orcLabel: UILabel!
 }

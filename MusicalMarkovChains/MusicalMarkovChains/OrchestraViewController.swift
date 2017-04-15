@@ -15,14 +15,14 @@ class OrchestraViewController: UIViewController,UITableViewDelegate, UITableView
        Orcoutlet.delegate = self
         super.viewDidLoad()
     }
-    
+    var note = String()
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //pageData
         //MyVariables.yourVariable
-        return 100
+        return 1
         
     }
     
@@ -32,6 +32,7 @@ class OrchestraViewController: UIViewController,UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let temp = tableView.dequeueReusableCell(withIdentifier: "orchestraReuse", for: indexPath) as? orchestraCell
+        //temp?.orcLabel.text = indexPath.item.description
         return temp!
         /*let temp = tableView.dequeueReusableCell(withIdentifier: "viewCellReuse", for: indexPath) as? categoryviewcell
          _ = pokemonArray?[indexPath.item ]

@@ -52,6 +52,7 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
     var i = Int()
     var k = Int()
     var j = Int()
+    var l = Int()
     var total = Double()
     @IBAction func confirmButtonPushed(_ sender: Any) {
         print(markovEditValues)
@@ -74,6 +75,13 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
             print("passed!")
             total = 0
             completed = true
+            l = 0
+            for ins in GlobalVars.globalchosenInstrumentArray {
+                if InstrBeingEdited == ins {
+                    GlobalVars.completedArray[l] = true
+                }
+                l = l + 1
+            }
             performSegue(withIdentifier: "editToMarkov", sender: nil)
         } else {
             total = 0

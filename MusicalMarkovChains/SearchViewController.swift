@@ -183,6 +183,7 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
             //MyUniVariables.co
         //mp
             GlobalVars.completedArray = tempcompletedArray
+            GlobalVars.globalchosenInstrumentArray = chosenInstrumentArray
             print(destination?.instrumlist)
         }
     }

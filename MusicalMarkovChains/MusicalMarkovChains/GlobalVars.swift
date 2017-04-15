@@ -11,4 +11,5 @@ import Foundation
 class GlobalVars{
     
     static var completedArray = [Bool]()
+    static var globalchosenInstrumentArray: [String] = []
 }

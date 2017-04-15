@@ -103,6 +103,17 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
                 }
             case 2:
                 chosenInstrumentArray.append("flute")
+                let url = Bundle.main.url(forResource: "fluteapp", withExtension: "wav")!
+                
+                do {
+                    player = try AVAudioPlayer(contentsOf: url)
+                    guard let player = player else { return }
+                    
+                    player.prepareToPlay()
+                    player.play()
+                } catch let error as NSError {
+                    print(error.description)
+                }
             case 3:
                 chosenInstrumentArray.append("elguitar")//electric guitar
             case 4:

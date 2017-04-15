@@ -26,6 +26,7 @@
 		B3CA1D751EA210C600F51730 /* OrchestraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CA1D741EA210C600F51730 /* OrchestraViewController.swift */; };
 		B3CA1D771EA2112A00F51730 /* orchestraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CA1D761EA2112A00F51730 /* orchestraCell.swift */; };
 		B3CA1D791EA2219D00F51730 /* violinapp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B3CA1D781EA2219D00F51730 /* violinapp.mp3 */; };
+		B3CA1D7B1EA2236E00F51730 /* fluteapp.wav in Resources */ = {isa = PBXBuildFile; fileRef = B3CA1D7A1EA2236E00F51730 /* fluteapp.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		B3CA1D741EA210C600F51730 /* OrchestraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrchestraViewController.swift; sourceTree = "<group>"; };
 		B3CA1D761EA2112A00F51730 /* orchestraCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = orchestraCell.swift; sourceTree = "<group>"; };
 		B3CA1D781EA2219D00F51730 /* violinapp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = violinapp.mp3; path = ../../../../violinapp.mp3; sourceTree = "<group>"; };
+		B3CA1D7A1EA2236E00F51730 /* fluteapp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = fluteapp.wav; path = ../../../../fluteapp.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				B3CA1D721EA200A200F51730 /* GlobalVars.swift */,
 				B3BD3A981E97A027002A323E /* markovEditCell.swift */,
 				B3C7D1E01E96484000EE65B4 /* SearchViewController.swift */,
+				B3CA1D7A1EA2236E00F51730 /* fluteapp.wav */,
 				B3C7D1A21E962AAA00EE65B4 /* AppDelegate.swift */,
 				B3C7D1A41E962AAA00EE65B4 /* RootViewController.swift */,
 				B3C7D1A61E962AAA00EE65B4 /* DataViewController.swift */,
@@ -273,6 +276,7 @@
 				B3CA1D791EA2219D00F51730 /* violinapp.mp3 in Resources */,
 				B3C7D1AE1E962AAB00EE65B4 /* Assets.xcassets in Resources */,
 				B3C7D1AC1E962AAA00EE65B4 /* Main.storyboard in Resources */,
+				B3CA1D7B1EA2236E00F51730 /* fluteapp.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

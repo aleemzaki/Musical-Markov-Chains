@@ -88,6 +88,17 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
             switch indexPath.item {
             case 0:
                 chosenInstrumentArray.append("trumpet")
+                let url = Bundle.main.url(forResource: "trumpet", withExtension: "mp3")!
+                
+                do {
+                    player = try AVAudioPlayer(contentsOf: url)
+                    guard let player = player else { return }
+                    
+                    player.prepareToPlay()
+                    player.play()
+                } catch let error as NSError {
+                    print(error.description)
+                }
             case 1:
                 chosenInstrumentArray.append("violin")
                 let url = Bundle.main.url(forResource: "violinapp", withExtension: "mp3")!
@@ -116,16 +127,82 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
                 }
             case 3:
                 chosenInstrumentArray.append("elguitar")//electric guitar
+                let url = Bundle.main.url(forResource: "elguiarapp", withExtension: "wav")!
+                
+                do {
+                    player = try AVAudioPlayer(contentsOf: url)
+                    guard let player = player else { return }
+                    
+                    player.prepareToPlay()
+                    player.play()
+                } catch let error as NSError {
+                    print(error.description)
+                }
             case 4:
                 chosenInstrumentArray.append("acguitar")//acoustic guitar
+                let url = Bundle.main.url(forResource: "acguiatarapp", withExtension: "wav")!
+                
+                do {
+                    player = try AVAudioPlayer(contentsOf: url)
+                    guard let player = player else { return }
+                    
+                    player.prepareToPlay()
+                    player.play()
+                } catch let error as NSError {
+                    print(error.description)
+                }
             case 5:
                 chosenInstrumentArray.append("piano")
+                let url = Bundle.main.url(forResource: "gpianoapp", withExtension: "wav")!
+                
+                do {
+                    player = try AVAudioPlayer(contentsOf: url)
+                    guard let player = player else { return }
+                    
+                    player.prepareToPlay()
+                    player.play()
+                } catch let error as NSError {
+                    print(error.description)
+                }
             case 6:
                 chosenInstrumentArray.append("keyboard")
+                let url = Bundle.main.url(forResource: "keyboardapp", withExtension: "wav")!
+                
+                do {
+                    player = try AVAudioPlayer(contentsOf: url)
+                    guard let player = player else { return }
+                    
+                    player.prepareToPlay()
+                    player.play()
+                } catch let error as NSError {
+                    print(error.description)
+                }
             case 7:
                 chosenInstrumentArray.append("drum")
+                let url = Bundle.main.url(forResource: "drumapp", withExtension: "wav")!
+                
+                do {
+                    player = try AVAudioPlayer(contentsOf: url)
+                    guard let player = player else { return }
+                    
+                    player.prepareToPlay()
+                    player.play()
+                } catch let error as NSError {
+                    print(error.description)
+                }
             default:
                 chosenInstrumentArray.append("trumpet")
+                let url = Bundle.main.url(forResource: "trumpet", withExtension: "mp3")!
+                
+                do {
+                    player = try AVAudioPlayer(contentsOf: url)
+                    guard let player = player else { return }
+                    
+                    player.prepareToPlay()
+                    player.play()
+                } catch let error as NSError {
+                    print(error.description)
+                }
             }
         } else {
            cell.backgroundColor = UIColor.white

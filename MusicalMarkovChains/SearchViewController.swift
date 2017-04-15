@@ -13,9 +13,9 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     var chosenInstrumentArray: [String] = []
     
-    struct MyGlobalVariables {
+    //struct MyVariables {
         static var yourVariable = "someString"
-    }
+    
     
     override func viewDidLoad() {
         CVCoutlet.dataSource = self
@@ -177,6 +177,8 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
        if segue.identifier == "instrumentToMarkov" {
             let destination = segue.destination as? MarkovViewController
             destination?.instrumlist = chosenInstrumentArray
+            //completion
+            //MyUniVariables.comp
             print(destination?.instrumlist)
         }
     }

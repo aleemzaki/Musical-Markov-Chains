@@ -23,7 +23,9 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
        markovEditOutlet.delegate = self
        super.viewDidLoad()
        initarray()
-    markovchaineditlabel.text = markovEditValues.description
+       markovchaineditlabel.text = markovEditValues.description
+       //SearchViewController.yourVa
+       GlobalVars.completedArray = [true]
     }
     
     func initarray(){
@@ -35,11 +37,13 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
         print("I should only appear once!")
         initonce = true
         }
-        for val in markovEditValues {
+        for _ in markovEditValues {
             markovEditDoubles.append(Double(round(100*(0.0))/100))
             //k = k + 1
+           // markovDict["sitar"]=[6.7]
         }
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

@@ -22,6 +22,7 @@
 		B3C7D1C71E962AAB00EE65B4 /* MusicalMarkovChainsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7D1C61E962AAB00EE65B4 /* MusicalMarkovChainsUITests.swift */; };
 		B3C7D1DF1E96460200EE65B4 /* instrumentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7D1DE1E96460200EE65B4 /* instrumentCell.swift */; };
 		B3C7D1E11E96484000EE65B4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7D1E01E96484000EE65B4 /* SearchViewController.swift */; };
+		B3CA1D731EA200A200F51730 /* GlobalVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CA1D721EA200A200F51730 /* GlobalVars.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		B3C7D1C81E962AAB00EE65B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3C7D1DE1E96460200EE65B4 /* instrumentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = instrumentCell.swift; sourceTree = "<group>"; };
 		B3C7D1E01E96484000EE65B4 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = ../SearchViewController.swift; sourceTree = "<group>"; };
+		B3CA1D721EA200A200F51730 /* GlobalVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVars.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				B3BD3A961E979FD9002A323E /* MarkovEditViewController.swift */,
+				B3CA1D721EA200A200F51730 /* GlobalVars.swift */,
 				B3BD3A981E97A027002A323E /* markovEditCell.swift */,
 				B3C7D1E01E96484000EE65B4 /* SearchViewController.swift */,
 				B3C7D1A21E962AAA00EE65B4 /* AppDelegate.swift */,
@@ -285,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3C7D1E11E96484000EE65B4 /* SearchViewController.swift in Sources */,
+				B3CA1D731EA200A200F51730 /* GlobalVars.swift in Sources */,
 				B3C7D1A51E962AAA00EE65B4 /* RootViewController.swift in Sources */,
 				B3BD3A931E97978C002A323E /* MarkovViewController.swift in Sources */,
 				B3BD3A991E97A027002A323E /* markovEditCell.swift in Sources */,

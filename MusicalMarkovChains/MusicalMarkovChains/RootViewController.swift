@@ -12,6 +12,11 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
 
     var pageViewController: UIPageViewController?
 
+    /*struct MyUniVariables {
+        static var yourVariable = "someString"
+        static var markovDictGlobal: [String:[Double]] = ["sitar":[7.3,4.3]]
+        static var completionArray = [Bool]()
+    }*/
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +42,7 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
         self.pageViewController!.view.frame = pageViewRect
 
         self.pageViewController!.didMove(toParentViewController: self)
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -40,6 +40,8 @@ class MarkovViewController: UIViewController,UITableViewDelegate,UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //pageData
+        //MyVariables.yourVariable
         return (instrumlist?.count)!
         
     }

@@ -8,11 +8,11 @@
 
 import Foundation
 import UIKit
-
+import AVFoundation
 class SearchViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
     
     var chosenInstrumentArray: [String] = []
-    
+    var player: AVAudioPlayer?
     //struct MyVariables {
         static var yourVariable = "someString"
     
@@ -90,6 +90,17 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
                 chosenInstrumentArray.append("trumpet")
             case 1:
                 chosenInstrumentArray.append("violin")
+                let url = Bundle.main.url(forResource: "violinapp", withExtension: "mp3")!
+                
+                do {
+                    player = try AVAudioPlayer(contentsOf: url)
+                    guard let player = player else { return }
+                    
+                    player.prepareToPlay()
+                    player.play()
+                } catch let error as NSError {
+                    print(error.description)
+                }
             case 2:
                 chosenInstrumentArray.append("flute")
             case 3:

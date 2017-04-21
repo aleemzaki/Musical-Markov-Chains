@@ -12,4 +12,4 @@ Well we have brought this idea to fruition with Musical Markov Chains!
 
 ## Instructions ##
 
-![](/Screen Shot 2017-04-20 at 9.47.29 PM.png)
+![](Screen Shot 2017-04-20 at 9.47.29 PM.png)

@@ -20,7 +20,7 @@ Second, roll up your sleeves are start completing each sound's Markov Chain!
 
 ![](/exB.png)
 
-Make sure the Probabilities add up to 1! For this example, should the Acoustic Guitar's sound be played, the is a 60% chance that the Acoustic Guitar's sound will be played next (again) and %40 chance that the Electric Guitar's sound will be played next. If the final probability's value is nonzero, the Markov Chain becomes illegal (since a Markov Chain's probabilities should total 1)
+Make sure the Probabilities add up to 1! For this example, should the Acoustic Guitar's sound be played, there is a 60% chance that the Acoustic Guitar's sound will be played next (again) and 40% chance that the Electric Guitar's sound will be played next. If the final probability's value is nonzero, the Markov Chain becomes illegal (since a Markov Chain's probabilities should total 1)
 
 ![](/exC.png)
 

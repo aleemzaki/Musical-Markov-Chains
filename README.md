@@ -12,3 +12,4 @@ Well we have brought this idea to fruition with Musical Markov Chains!
 
 ## Instructions ##
 
+![](/README-images/README-1.png)

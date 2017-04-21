@@ -12,4 +12,14 @@ Well we have brought this idea to fruition with Musical Markov Chains!
 
 ## Instructions ##
 
-![alt tag](https://github.com/aleemzaki/Musical-Markov-Chains/exA.png)
+First, select your instruments
+![](/exA.png)
+
+Second, roll up your sleeves are start completing each sound's Markov Chain!
+![](/exB.png)
+
+Make sure the Probabilities add up to 1!
+![](/exC.png)
+
+When all the Markov Chains are complete, "Orchestrate" and enjoy the show!
+![](/exD.png)

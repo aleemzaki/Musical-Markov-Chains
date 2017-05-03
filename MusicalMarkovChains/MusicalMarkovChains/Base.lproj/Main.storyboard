@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -37,9 +38,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cZM-Fp-Ayu">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cZM-Fp-Ayu">
                                 <rect key="frame" x="0.0" y="64" width="375" height="538"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aiI-xp-YLZ">
                                     <size key="itemSize" width="122" height="122"/>
@@ -75,10 +75,12 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1At-ii-dzz">
-                                <rect key="frame" x="0.0" y="610" width="375" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1At-ii-dzz">
+                                <rect key="frame" x="0.0" y="545" width="375" height="57"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="vIa-B8-gUJ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Continue with Selected Instruments"/>
                                 <connections>
@@ -87,6 +89,15 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cZM-Fp-Ayu" firstAttribute="height" secondItem="i2c-3P-s0Z" secondAttribute="height" id="6e4-xZ-7OD"/>
+                            <constraint firstItem="8Bo-5z-53l" firstAttribute="top" secondItem="1At-ii-dzz" secondAttribute="bottom" constant="2" id="Erc-ar-kDn"/>
+                            <constraint firstItem="cZM-Fp-Ayu" firstAttribute="centerY" secondItem="i2c-3P-s0Z" secondAttribute="centerY" id="H6H-Js-O4P"/>
+                            <constraint firstItem="cZM-Fp-Ayu" firstAttribute="width" secondItem="i2c-3P-s0Z" secondAttribute="width" id="OAG-sJ-UyL"/>
+                            <constraint firstItem="cZM-Fp-Ayu" firstAttribute="centerX" secondItem="i2c-3P-s0Z" secondAttribute="centerX" id="Z15-4h-F6Y"/>
+                            <constraint firstItem="1At-ii-dzz" firstAttribute="centerX" secondItem="i2c-3P-s0Z" secondAttribute="centerX" id="onz-4I-TtJ"/>
+                            <constraint firstItem="1At-ii-dzz" firstAttribute="width" secondItem="i2c-3P-s0Z" secondAttribute="width" id="s7c-Sb-coR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UlG-AS-D1j"/>
                     <connections>
@@ -120,7 +131,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o9l-cr-buv" id="jW9-AF-l76">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="instrum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7K-fc-szG">
@@ -277,23 +288,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gnm-a4-zfb">
-                                <rect key="frame" x="16" y="28" width="343" height="619"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gnm-a4-zfb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="orchestraReuse" rowHeight="150" id="C4X-Bl-9ju" customClass="orchestraCell" customModule="MusicalMarkovChains" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="150"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C4X-Bl-9ju" id="A1I-6d-tyj">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="149"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jo6-gX-kUA">
-                                                    <rect key="frame" x="106" y="9" width="130" height="130"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jo6-gX-kUA">
+                                                    <rect key="frame" x="122.5" y="9" width="130" height="130"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="130" id="DZk-Un-GFA"/>
+                                                        <constraint firstAttribute="height" constant="130" id="qq8-Vf-heo"/>
+                                                        <constraint firstAttribute="width" secondItem="jo6-gX-kUA" secondAttribute="height" multiplier="1:1" id="xm5-wN-XhH"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jo6-gX-kUA" firstAttribute="centerX" secondItem="A1I-6d-tyj" secondAttribute="centerX" id="Ksi-5d-NWF"/>
+                                                <constraint firstItem="jo6-gX-kUA" firstAttribute="centerY" secondItem="A1I-6d-tyj" secondAttribute="centerY" id="n4c-9Q-oSu"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="orcImage" destination="jo6-gX-kUA" id="8yc-CM-t7G"/>
@@ -303,6 +321,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gnm-a4-zfb" firstAttribute="width" secondItem="Yts-9a-Kwi" secondAttribute="width" id="8Ts-54-fFC"/>
+                            <constraint firstItem="Gnm-a4-zfb" firstAttribute="centerY" secondItem="Yts-9a-Kwi" secondAttribute="centerY" id="Ey4-Nx-FC1"/>
+                            <constraint firstItem="Gnm-a4-zfb" firstAttribute="centerX" secondItem="Yts-9a-Kwi" secondAttribute="centerX" id="i49-DO-WSp"/>
+                            <constraint firstItem="Gnm-a4-zfb" firstAttribute="height" secondItem="Yts-9a-Kwi" secondAttribute="height" id="iAU-iL-Stf"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="Orcoutlet" destination="Gnm-a4-zfb" id="qpx-mn-yia"/>
@@ -314,6 +338,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ezq-Su-v6z"/>
+        <segue reference="6sg-vl-gzr"/>
     </inferredMetricsTieBreakers>
 </document>

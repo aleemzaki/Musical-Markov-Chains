@@ -100,6 +100,8 @@ class MarkovViewController: UIViewController,UITableViewDelegate,UITableViewData
         
     }
     
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         
         
@@ -113,8 +115,56 @@ class MarkovViewController: UIViewController,UITableViewDelegate,UITableViewData
             let goal = segue.destination as? OrchestraViewController
             print("here")
             goal?.note = "hi"
+            var chainArray: [String] = []
+            var currentKey = GlobalVars.globalchosenInstrumentArray[0]
+            print(currentKey)
+            var i = 0
+            while i < GlobalVars.lengthChain {
+                if (i == 0) {
+                    //initial state
+                    chainArray.append(currentKey)
+                }
+                else {
+                    print("Dict:", GlobalVars.globalmarkovDict)
+                    var currentTuple = GlobalVars.globalmarkovDict[currentKey] as [Double]?
+                    print("Current Tuple:", currentTuple)
+                    let random = Double(drand48())
+                    print("random: ", random)
+                    var indexInTuple = -1
+                    var currTotalCDF = 0.0
+                    while (currTotalCDF < random) {
+                        print("Index: ", indexInTuple)
+                        indexInTuple += 1
+                        currTotalCDF += (currentTuple?[indexInTuple])!
+                        
+                    }
+                    var nextKey = GlobalVars.globalchosenInstrumentArray[indexInTuple]
+                    chainArray.append(nextKey)
+                    currentKey = nextKey
+                    print(nextKey)
+                }
+                i += 1
+            }
+            goal?.chainArray = chainArray
         }
+        
+        
     }
+    
+    @IBAction func editToMarkov(segue:UIStoryboardSegue){
+        let source = segue.source as! MarkovEditViewController
+        if (source.completed){
+            print("EditToMarkov")
+            print("EditToMarkov")
+            print("EditToMarkov")
+
+            self.justCompletedInstrum = source.InstrBeingEdited
+            self.markovDoubles = (source.markovEditDoubles)
+            self.update()
+        }
+        self.instrumlist = source.editableInstrumlist
+    }
+
     
     
    // @IBOutlet weak var tableViewOutlet: UITableView!

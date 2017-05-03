@@ -10,5 +10,6 @@ import Foundation
 import UIKit
 class orchestraCell: UITableViewCell {
     
+    @IBOutlet weak var orcImage: UIImageView!
     @IBOutlet weak var orcLabel: UILabel!
 }

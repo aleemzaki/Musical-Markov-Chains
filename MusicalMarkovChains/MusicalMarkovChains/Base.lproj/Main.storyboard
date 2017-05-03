@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HBN-7U-Lcc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HBN-7U-Lcc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -258,12 +258,12 @@
                         <outlet property="confirmButton" destination="Kr0-AL-kfc" id="U0y-47-6ya"/>
                         <outlet property="markovEditOutlet" destination="vfh-78-Kwd" id="Vhy-iP-69T"/>
                         <outlet property="markovchaineditlabel" destination="lTt-gP-RgO" id="1zq-U6-u0R"/>
-                        <segue destination="Ogc-7b-Izz" kind="show" identifier="editToMarkov" id="xvS-ao-ext"/>
+                        <segue destination="Ogc-7b-Izz" kind="show" identifier="editToMarkov" id="Ezq-Su-v6z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XuM-NQ-B6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2060" y="1149.1754122938532"/>
+            <point key="canvasLocation" x="2732" y="1140"/>
         </scene>
         <!--Orchestra View Controller-->
         <scene sceneID="dZd-GM-7Gn">
@@ -282,24 +282,21 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="orchestraReuse" id="C4X-Bl-9ju" customClass="orchestraCell" customModule="MusicalMarkovChains" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="orchestraReuse" rowHeight="150" id="C4X-Bl-9ju" customClass="orchestraCell" customModule="MusicalMarkovChains" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C4X-Bl-9ju" id="A1I-6d-tyj">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="149"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="947-dc-A18">
-                                                    <rect key="frame" x="124" y="11" width="42" height="21"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jo6-gX-kUA">
+                                                    <rect key="frame" x="106" y="9" width="130" height="130"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="orcLabel" destination="947-dc-A18" id="yS9-iO-UHj"/>
+                                            <outlet property="orcImage" destination="jo6-gX-kUA" id="8yc-CM-t7G"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -313,10 +310,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W7G-Ht-ucH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1692" y="1814.8425787106448"/>
+            <point key="canvasLocation" x="1328.8" y="2063.1184407796104"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xvS-ao-ext"/>
+        <segue reference="Ezq-Su-v6z"/>
     </inferredMetricsTieBreakers>
 </document>

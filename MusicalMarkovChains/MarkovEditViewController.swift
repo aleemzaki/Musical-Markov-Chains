@@ -83,7 +83,7 @@ class MarkovEditViewController: UIViewController,UITableViewDelegate,UITableView
                 l = l + 1
             }
             //dictionary.updateValue(value: "Hola", forKey: 1)
-            GlobalVars.globalmarkovDict.updateValue(markovEditDoubles, forKey: (InstrBeingEdited?.capitalized)!)
+            GlobalVars.globalmarkovDict.updateValue(markovEditDoubles, forKey: (InstrBeingEdited)!)
             print("BEGIN")
             print(GlobalVars.globalmarkovDict)
             print("END")

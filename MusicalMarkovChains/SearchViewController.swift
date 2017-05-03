@@ -14,7 +14,7 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
     var chosenInstrumentArray: [String] = []
     var player: AVAudioPlayer?
     //struct MyVariables {
-        static var yourVariable = "someString"
+    static var yourVariable = "someString"
     
     
     override func viewDidLoad() {
@@ -45,23 +45,23 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
         //let cellString = PokemonGenerator.categoryDict[indexPath.item ]
         switch indexPath.item {
         case 0:
-            temp?.outletii.image = #imageLiteral(resourceName: "Trumpet")
+            temp?.outletii.image = #imageLiteral(resourceName: "trumpet")
         case 1:
             temp?.outletii.image = #imageLiteral(resourceName: "violin")
         case 2:
             temp?.outletii.image = #imageLiteral(resourceName: "flute")
         case 3:
-            temp?.outletii.image = #imageLiteral(resourceName: "EL.guitar")
+            temp?.outletii.image = #imageLiteral(resourceName: "elguitar")
         case 4:
-            temp?.outletii.image = #imageLiteral(resourceName: "Acoutsitcguitar")
+            temp?.outletii.image = #imageLiteral(resourceName: "acguitar")
         case 5:
-            temp?.outletii.image = #imageLiteral(resourceName: "gpiano")
+            temp?.outletii.image = #imageLiteral(resourceName: "piano")
         case 6:
             temp?.outletii.image = #imageLiteral(resourceName: "keyboard")
         case 7:
             temp?.outletii.image = #imageLiteral(resourceName: "drum")
         default:
-            temp?.outletii.image = #imageLiteral(resourceName: "Trumpet")
+            temp?.outletii.image = #imageLiteral(resourceName: "trumpet")
             
             
         }
@@ -74,7 +74,7 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
     @IBOutlet weak var instrToMarkovButton: UIButton!
     
     @IBAction func continueWithSelInstrPressed(_ sender: UIButton) {
-       // view.backgroundColor = UIColor.green
+        // view.backgroundColor = UIColor.green
         performSegue(withIdentifier: "instrumentToMarkov", sender: nil)
         print("success!")
     }
@@ -88,7 +88,7 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
             switch indexPath.item {
             case 0:
                 chosenInstrumentArray.append("trumpet")
-                let url = Bundle.main.url(forResource: "trumpet", withExtension: "mp3")!
+                let url = Bundle.main.url(forResource: "trumpetapp", withExtension: "mp3")!
                 
                 do {
                     player = try AVAudioPlayer(contentsOf: url)
@@ -205,7 +205,7 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
                 }
             }
         } else {
-           cell.backgroundColor = UIColor.white
+            cell.backgroundColor = UIColor.white
             i=0
             switch indexPath.item {
             case 0:
@@ -273,14 +273,14 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         
-       if segue.identifier == "instrumentToMarkov" {
+        if segue.identifier == "instrumentToMarkov" {
             let destination = segue.destination as? MarkovViewController
             destination?.instrumlist = chosenInstrumentArray
             //[Bool](count:(destination?.instrumlist?.count)!, repeatedValue: nil)
             var tempcompletedArray = [Bool]( repeating: false, count: (destination?.instrumlist?.count)! )
             //completion
             //MyUniVariables.co
-        //mp
+            //mp
             GlobalVars.completedArray = tempcompletedArray
             GlobalVars.globalchosenInstrumentArray = chosenInstrumentArray
             print(destination?.instrumlist)
@@ -289,14 +289,14 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     // Utility function to iterate through pokemon array for a single category
     /*func filteredPokemon(ofType type: Int) -> [Pokemon] {
-        var filtered: [Pokemon] = []
-        for pokemon in pokemonArray {
-            if (pokemon.types.contains(PokemonGenerator.categoryDict[type]!)) {
-                filtered.append(pokemon)
-            }
-        }
-        return filtered
-    }*/
+     var filtered: [Pokemon] = []
+     for pokemon in pokemonArray {
+     if (pokemon.types.contains(PokemonGenerator.categoryDict[type]!)) {
+     filtered.append(pokemon)
+     }
+     }
+     return filtered
+     }*/
     
     
 }

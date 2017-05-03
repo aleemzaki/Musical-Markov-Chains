@@ -14,4 +14,5 @@ class GlobalVars{
     static var readyToOrchestrate = Bool()
     static var globalchosenInstrumentArray: [String] = []
     static var globalmarkovDict = [String:[Double]]()// = ["sitar":[7.3,4.3]]
+    static var lengthChain = 10
 }

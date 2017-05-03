@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 extension Double {
     private static let arc4randomMax = Double(UInt32.max)
@@ -22,6 +23,7 @@ extension Double {
 class OrchestraViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     var chainArray: [String] = []
+    var player: AVAudioPlayer?
 
     
     override func viewDidLoad() {
@@ -50,8 +52,131 @@ class OrchestraViewController: UIViewController,UITableViewDelegate, UITableView
         //play sounds
         print("Chain Array length:")
         print(chainArray.count)
+        var i = 0.0
+        for item in chainArray {
+            let when = DispatchTime.now() + Double(1.5 * i) // change 2 to desired number of seconds
+            DispatchQueue.main.asyncAfter(deadline: when) {
+                self.playSound(instrName: item)
+                print("playing", item)
+            }
+            i += 1
+        }
     }
     
+    func playSound(instrName: String) {
+        switch instrName {
+        case "trumpet":
+            let url = Bundle.main.url(forResource: "trumpetapp", withExtension: "mp3")!
+            do {
+                player = try AVAudioPlayer(contentsOf: url)
+                guard let player = player else { return }
+                
+                player.prepareToPlay()
+                player.play()
+            } catch let error as NSError {
+                print(error.description)
+            }
+        case "violin":
+            let url = Bundle.main.url(forResource: "violinapp", withExtension: "mp3")!
+            
+            do {
+                player = try AVAudioPlayer(contentsOf: url)
+                guard let player = player else { return }
+                
+                player.prepareToPlay()
+                player.play()
+            } catch let error as NSError {
+                print(error.description)
+            }
+        case "flute":
+            let url = Bundle.main.url(forResource: "fluteapp", withExtension: "wav")!
+            
+            do {
+                player = try AVAudioPlayer(contentsOf: url)
+                guard let player = player else { return }
+                
+                player.prepareToPlay()
+                player.play()
+                
+                
+            } catch let error as NSError {
+                print(error.description)
+            }
+        case "elguitar":
+            let url = Bundle.main.url(forResource: "elguiarapp", withExtension: "wav")!
+            
+            do {
+                player = try AVAudioPlayer(contentsOf: url)
+                guard let player = player else { return }
+                
+                player.prepareToPlay()
+                player.play()
+            } catch let error as NSError {
+                print(error.description)
+            }
+        case "acguitar":
+            let url = Bundle.main.url(forResource: "acguiatarapp", withExtension: "wav")!
+            
+            do {
+                player = try AVAudioPlayer(contentsOf: url)
+                guard let player = player else { return }
+                
+                player.prepareToPlay()
+                player.play()
+            } catch let error as NSError {
+                print(error.description)
+            }
+        case "piano":
+            let url = Bundle.main.url(forResource: "gpianoapp", withExtension: "wav")!
+            
+            do {
+                player = try AVAudioPlayer(contentsOf: url)
+                guard let player = player else { return }
+                
+                player.prepareToPlay()
+                player.play()
+            } catch let error as NSError {
+                print(error.description)
+            }
+        case "keyboard":
+            let url = Bundle.main.url(forResource: "keyboardapp", withExtension: "wav")!
+            
+            do {
+                player = try AVAudioPlayer(contentsOf: url)
+                guard let player = player else { return }
+                
+                player.prepareToPlay()
+                player.play()
+            } catch let error as NSError {
+                print(error.description)
+            }
+        case "drum":
+            let url = Bundle.main.url(forResource: "drumapp", withExtension: "wav")!
+            
+            do {
+                player = try AVAudioPlayer(contentsOf: url)
+                guard let player = player else { return }
+                
+                player.prepareToPlay()
+                player.play()
+            } catch let error as NSError {
+                print(error.description)
+            }
+        default:
+            let url = Bundle.main.url(forResource: "trumpet", withExtension: "mp3")!
+            
+            do {
+                player = try AVAudioPlayer(contentsOf: url)
+                guard let player = player else { return }
+                
+                player.prepareToPlay()
+                player.play()
+            } catch let error as NSError {
+                print(error.description)
+            }
+        }
+
+    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -24,6 +24,8 @@ Second, roll up your sleeves are start completing each sound's Markov Chain!
 
 Make sure the Probabilities add up to 1! For this example, should the Acoustic Guitar's sound be played, there is a 60% chance that the Acoustic Guitar's sound will be played next (again) and 40% chance that the Electric Guitar's sound will be played next. If the Pr[acguitar to violin] (read "Probability of the violin's sound being played given that the Acoustic Guitar's sound has just been played") is nonzero, the Markov Chain becomes illegal (since a Markov Chain's probabilities should total 1)
 
+(Also, note that after you have entered all of your probabilities on this screen, to confirm them you need to press/click on the rows to confirm and save your entries.)
+
 ![](/exC.png)
 
 When all the Markov Chains are complete, "Orchestrate" and enjoy the show!

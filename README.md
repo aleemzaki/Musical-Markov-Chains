@@ -14,7 +14,7 @@ Well we have brought this idea to fruition with Musical Markov Chains!
 
 ## Instructions ##
 
-First, select your instruments
+First, select your instruments:
 
 ![](/exA.png)
 
@@ -29,3 +29,5 @@ Make sure the Probabilities add up to 1! For this example, should the Acoustic G
 When all the Markov Chains are complete, "Orchestrate" and enjoy the show!
 
 ![](/exD.png)
+
+The cool thing is: every time you press "Orchestrate", a new sequence is generated based on the transition probabilities; that is, a unique and different sequence will probably be generated every time!

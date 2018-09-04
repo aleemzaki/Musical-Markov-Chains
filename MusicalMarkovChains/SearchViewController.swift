@@ -75,7 +75,13 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     @IBAction func continueWithSelInstrPressed(_ sender: UIButton) {
         // view.backgroundColor = UIColor.green
-        performSegue(withIdentifier: "instrumentToMarkov", sender: nil)
+        if (chosenInstrumentArray.count != 0) {
+            performSegue(withIdentifier: "instrumentToMarkov", sender: nil)
+        } else {
+            let alert = UIAlertController(title: "Error", message: "No instruments have been selected", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
         print("success!")
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
